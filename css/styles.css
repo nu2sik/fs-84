@@ -1,11 +1,9 @@
-/* @font-face {
-  font-family: "Open Sans";
-  src: url(../fonts/OpenSans-Regular.ttf);
+:root {
+  --main-title-color: #fff;
+  --secondary-title-color: #303030;
+  --accent-color: #ff6c00;
+  --secondary-font: "Raleway", sans-serif;
 }
-@font-face {
-  font-family: "Open Sans Bold";
-  src: url(../fonts/OpenSans-Bold.ttf);
-} */
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -17,6 +15,41 @@ body {
 .link {
   text-decoration: none;
 }
+.btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.title {
+  font-family: var(--secondary-font);
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+}
+.subtitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.33;
+  text-transform: uppercase;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* ---------------- Header ---------------- */
 
 .header {
   background-color: gray;
@@ -29,6 +62,7 @@ body {
 }
 .header-item {
 }
+
 .header-link {
   font-weight: 600;
   font-size: 20px;
@@ -36,6 +70,11 @@ body {
   letter-spacing: 0.1em;
   color: #ffffff;
 }
+.header-link:hover,
+.header-link:focus {
+  color: var(--accent-color);
+}
+
 .header-tel {
   font-weight: 600;
   font-size: 12px;
@@ -45,11 +84,216 @@ body {
   color: #ffffff;
 }
 .header-btn {
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
   color: #ffffff;
+}
+
+/* ---------------- Hero ---------------- */
+
+.hero {
+  background-color: gray;
+}
+.hero-list {
+}
+.hero-item {
+}
+.hero-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #fff;
+}
+.hero-link:hover,
+.hero-link:focus {
+  color: var(--accent-color);
+}
+.hero-subtitle {
+  color: rgba(157, 164, 189, 0.6);
+}
+.hero-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+  color: var(--main-title-color);
+}
+.hero-description {
+  font-size: 18px;
+  line-height: 1.67;
+
+  letter-spacing: 0.02em;
+
+  color: #9da4bd;
+}
+
+/* ---------------- About ---------------- */
+
+.about {
+}
+.about-list {
+}
+.about-item {
+}
+.about-subtitle {
+  color: var(--secondary-title-color);
+}
+.about-title {
+  color: var(--secondary-title-color);
+}
+.about-description {
+  font-size: 14px;
+  line-height: 1.86;
+
+  letter-spacing: 0.02em;
+
+  color: #555555;
+}
+.about-description span {
+  font-size: 18px;
+  line-height: 1.67;
+}
+.about-btn {
+  color: #303030;
+}
+
+/* ---------------- Prices ---------------- */
+
+.prices {
+}
+.prices-subtitle {
+  color: rgba(157, 164, 189, 0.6);
+}
+.prices-title {
+  color: var(--main-title-color);
+}
+.prices-list {
+}
+.prices-item {
+}
+.prices-item-text {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+.prices-btn {
+  color: #ffffff;
+}
+
+/* ---------------- Benefits ---------------- */
+
+.benefits {
+}
+.benefits-list {
+}
+
+.benefits-item {
+}
+.benefits-item > span {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #303030;
+}
+.benefits-item-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.33;
+  text-align: center;
+  color: #303030;
+}
+.benefits-subtitle {
+  color: var(--secondary-title-color);
+}
+.benefits-title {
+  color: var(--secondary-title-color);
+}
+
+.benefits-description {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #555555;
+}
+
+/* ---------------- Barbers ---------------- */
+
+.barbers {
+}
+.barbers-subtitle {
+  color: var(--secondary-title-color);
+}
+.barbers-title {
+  color: var(--secondary-title-color);
+}
+.barbers-list {
+}
+.barbers-item {
+}
+.barbers-item-title {
+  font-size: 18px;
+  line-height: 1.39;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--secondary-title-color);
+}
+.barbers-item-text {
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+/* ---------------- Gallery ---------------- */
+
+.gallery {
+}
+.gallery-subtitle {
+  color: var(--secondary-title-color);
+}
+.visually-hidden {
+}
+.gallery-list {
+}
+.gallery-item {
+}
+
+/* ---------------- Contact ---------------- */
+
+.contact {
+}
+.contact-title {
+  color: var(--main-title-color);
+}
+.contact-address {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.67;
+
+  letter-spacing: 0.02em;
+
+  color: #9da4bd;
+}
+.contact-list {
+}
+.contact-item {
+}
+.contact-link {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+.contact-subtitle {
+  color: var(--main-title-color);
+}
+.contact-hours {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
 }
