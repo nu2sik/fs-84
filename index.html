@@ -177,30 +177,34 @@
 
       <!-- Section Feature -->
       <section class="benefits">
-        <ul class="benefits-list list">
-          <li class="benefits-item">
-            <span>600</span>
-            <p class="benefits-item-text">Satisfied customers per day</p>
-          </li>
-          <li class="benefits-item">
-            <span>50</span>
-            <p class="benefits-item-text">Awards for excellent service</p>
-          </li>
-          <li class="benefits-item">
-            <span>20</span>
-            <p class="benefits-item-text">Kyiv’s best barbers</p>
-          </li>
-          <li class="benefits-item">
-            <span>100</span>
-            <p class="benefits-item-text">Gifts for regular customers</p>
-          </li>
-        </ul>
-        <p class="benefits-subtitle subtitle">Old traditional school</p>
-        <h2 class="benefits-title title">¿Why people come to us?</h2>
-        <p class="benefits-description">
-          Only good things are said about us. But it's better to see and feel 1
-          time than read 10 times.
-        </p>
+        <div class="container benefits-container">
+          <ul class="benefits-list list">
+            <li class="benefits-item">
+              <span>600</span>
+              <p class="benefits-item-text">Satisfied customers per day</p>
+            </li>
+            <li class="benefits-item">
+              <span>50</span>
+              <p class="benefits-item-text">Awards for excellent service</p>
+            </li>
+            <li class="benefits-item">
+              <span>20</span>
+              <p class="benefits-item-text">Kyiv’s best barbers</p>
+            </li>
+            <li class="benefits-item">
+              <span>100</span>
+              <p class="benefits-item-text">Gifts for regular customers</p>
+            </li>
+          </ul>
+          <div class="benefits-content">
+            <p class="benefits-subtitle subtitle">Old traditional school</p>
+            <h2 class="benefits-title title">¿Why people come to us?</h2>
+            <p class="benefits-description">
+              Only good things are said about us. But it's better to see and
+              feel 1 time than read 10 times.
+            </p>
+          </div>
+        </div>
       </section>
       <!-- /Section Feature -->
 
@@ -336,56 +340,68 @@
       </section>
       <!-- /Section Gallery  -->
 
-      <section>
-        <h2>Online-booking</h2>
-      </section>
       <!-- Section Contact -->
       <section class="contact" id="contact">
-        <h2 class="contact-title title">Contacts</h2>
-        <address class="contact-address">
-          <ul class="contact-list list">
-            <li class="contact-item">
-              <a
-                href="https://goo.gl/maps/hResCekDZCyXk1Gw8"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                class="contact-link link"
-                >st. Vasilkivska, 7A <br />
-                Kyiv, 08132</a
-              >
-            </li>
-            <li class="contact-item">
-              <a href="tel:+380441111111" class="contact-link link"
-                >+38 044 111 11 11</a
-              >
-            </li>
-            <li class="contact-item">
-              <a href="mailto:barbershop@email.com" class="contact-link link"
-                >barbershop@email.com</a
-              >
-            </li>
-          </ul>
-        </address>
-        <p class="contact-subtitle subtitle">Working hours</p>
-        <p class="contact-hours">Every day from 9:00 to 22:00</p>
+        <div class="container contact-container">
+          <div class="contact-form">
+            <h2>Online-booking</h2>
+          </div>
+
+          <div class="contact-wrap">
+            <h2 class="contact-title title">Contacts</h2>
+            <address class="contact-address">
+              <ul class="contact-list list">
+                <li class="contact-item">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 10.3636C20 16.0909 12 21 12 21C12 21 4 16.0909 4 10.3636C4 6.29681 7.58172 3 12 3C16.4183 3 20 6.29681 20 10.3636V10.3636Z" stroke="#9DA4BD" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 14C13.6569 14 15 12.6569 15 11C15 9.34315 13.6569 8 12 8C10.3431 8 9 9.34315 9 11C9 12.6569 10.3431 14 12 14Z" stroke="#9DA4BD" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  <a
+                    href="https://goo.gl/maps/hResCekDZCyXk1Gw8"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    class="contact-link link"
+                    >st. Vasilkivska, 7A <br />
+                    Kyiv, 08132</a
+                  >
+                </li>
+                <li class="contact-item">
+                  <a href="tel:+380441111111" class="contact-link link"
+                    >+38 044 111 11 11</a
+                  >
+                </li>
+                <li class="contact-item">
+                  <a
+                    href="mailto:barbershop@email.com"
+                    class="contact-link link"
+                    >barbershop@email.com</a
+                  >
+                </li>
+              </ul>
+            </address>
+            <p class="contact-subtitle subtitle">Working hours</p>
+            <p class="contact-hours">Every day from 9:00 to 22:00</p>
+          </div>
+        </div>
       </section>
       <!-- /Section Contact -->
     </main>
-    <footer>
-      <p>&copy;Copyright 2020</p>
-      <ul>
-        <li>
-          <a href="#" target="_blank" rel="noopener noreferrer nofollow"
-            >Instagram</a
-          >
-        </li>
-        <li>
-          <a href="#" target="_blank" rel="noopener noreferrer nofollow"
-            >Youtube</a
-          >
-        </li>
-      </ul>
-      &iquest;
+    <footer class="footer">
+      <div class="container footer-container">
+        <p>&copy;Copyright 2020</p>
+        <ul class="social-list list">
+          <li class="social-item">
+            <a href="#" class="social-link link" target="_blank" rel="noopener noreferrer nofollow"
+              >Instagram</a
+            >
+          </li class="social-item">
+          <li>
+            <a href="#" class="social-link link" target="_blank" rel="noopener noreferrer nofollow"
+              >Youtube</a
+            >
+          </li>
+        </ul>
+      </div>
     </footer>
   </body>
 </html>
