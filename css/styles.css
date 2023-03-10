@@ -23,6 +23,8 @@ ul {
 
 img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 body {
@@ -56,6 +58,11 @@ body {
   border: 1px solid var(--accent-color);
   border-radius: 25px;
   padding: 12px 20px;
+  transition: color 0.35s linear, background 0.35s linear;
+}
+.btn:is(:hover, :focus) {
+  color: #fff;
+  background-color: var(--accent-color);
 }
 .title {
   font-family: var(--secondary-font);
@@ -96,8 +103,10 @@ body {
 /* ---------------- Header ---------------- */
 
 .header {
-  background-color: gray;
   padding: 32px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .header-container {
   display: flex;
@@ -123,10 +132,24 @@ body {
   line-height: 1.33;
   letter-spacing: 0.1em;
   color: #ffffff;
+  position: relative;
+  transition: color 0.35s linear;
 }
 .header-link:hover,
 .header-link:focus {
   color: var(--accent-color);
+}
+.header-link.active {
+  color: var(--accent-color);
+}
+.header-link.active::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: var(--accent-color);
+  position: absolute;
+  left: 0;
+  bottom: -10px;
 }
 
 .header-tel {
@@ -157,6 +180,28 @@ body {
 }
 .hero-list {
   width: 100px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: bottom left;
+  /* padding-top: 30px; */
+  /* position: relative; */
+  /* padding-left: 90px; */
+}
+.hero-list::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+  flex-shrink: 0;
+  /* position: absolute;
+  left: 0;
+  bottom: 7px; */
+}
+.hero-list-wrap {
+  display: flex;
+  align-items: flex-end;
 }
 .hero-content {
   background-color: gray;
@@ -178,6 +223,7 @@ body {
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: #303030;
+  transition: color 0.35s linear;
 }
 .hero-link:hover,
 .hero-link:focus {
@@ -363,16 +409,17 @@ body {
   text-align: center;
   letter-spacing: 0.05em;
   color: #303030;
-  display: flex;
-  align-items: flex-start;
+  position: relative;
 }
 .benefits-item > span::after {
   content: "+";
   font-weight: 600;
   font-size: 16px;
   line-height: calc(22 / 16);
-
   color: var(--accent-color);
+  position: absolute;
+  top: 7px;
+  right: -10px;
 }
 .benefits-item-text {
   font-weight: 600;
@@ -423,6 +470,7 @@ body {
 .barbers-item {
   width: calc((100% - 60px) / 3);
 }
+
 .barbers-content {
   padding: 30px;
 }
@@ -461,6 +509,7 @@ body {
   border-radius: 50%;
   background-color: gray;
   color: #000;
+  transition: color 0.35s linear, background 0.35s linear;
 }
 
 .barbers-social-link:is(:hover, :focus) {
@@ -470,6 +519,26 @@ body {
 
 .barbers-social-icon {
   fill: currentColor;
+}
+.barbers-top-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.barbers-item-text-overlay {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 0.35s linear;
+  overflow: auto;
+}
+.barbers-item:hover .barbers-item-text-overlay {
+  transform: translateY(0);
 }
 /* .barbers-social-link:is(:hover, :focus) .barbers-social-icon {
   fill: white;
@@ -612,4 +681,44 @@ body {
 
 .barbers-item:nth-child(2):hover {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: opacity 0.35s linear, visibility 0.35s linear;
+}
+.modal {
+  width: 500px;
+  min-height: 500px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.35s linear;
+}
+.modal-close {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+}
+
+.is-hidden {
+  /* opacity: 0; */
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
 }

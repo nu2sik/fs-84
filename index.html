@@ -32,7 +32,7 @@
               <a href="#" class="header-link link">About</a>
             </li>
             <li class="header-item">
-              <a href="#" class="header-link link">Services and prices</a>
+              <a href="#" class="header-link link active">Services and prices</a>
             </li>
             <li class="header-item">
               <a href="#" class="header-link link">Barbers</a>
@@ -45,14 +45,15 @@
         <a href="tel:+380441111111" class="header-tel link"
           >+38 044 111 11 11</a
         >
-        <button type="button" class="header-btn btn">Online-booking</button>
+        <button type="button" data-modal-open class="header-btn btn">Online-booking</button>
       </div>
     </header>
     <main>
       <!-- Hero section -->
       <section class="hero">
         <div class="container hero-container">
-          <ul class="hero-list">
+          <div class="hero-list-wrap">
+          <ul class="hero-list list">
             <li class="hero-item">
               <a
                 href="#"
@@ -72,6 +73,7 @@
               >
             </li>
           </ul>
+          </div>
           <div class="hero-content">
             <p class="hero-subtitle subtitle">A hair salon for men in Kyiv</p>
             <h1 class="hero-title title">BarberShop</h1>
@@ -217,12 +219,15 @@
           <h2 class="barbers-title title">Our barbers</h2>
           <ul class="barbers-list list">
             <li class="barbers-item">
+              <div class="barbers-top-wrap">
               <img
                 src="./img/barber-team-1.jpg"
                 alt="barber work"
                 width="370"
                 height="346"
               />
+              <p class="barbers-item-text-overlay">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed possimus sunt ducimus? Inventore, itaque voluptates quis, error dolore iste commodi quisquam ullam totam ut dolorum minus, molestiae dolorem dignissimos in.</p>
+            </div>
               <div class="barbers-content">
                 <h3 class="barbers-item-title">John Smith</h3>
                 <p class="barbers-item-text">Extreme Barber</p>
@@ -403,5 +408,11 @@
         </ul>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" data-modal-close class="modal-close">X</button>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
   </body>
 </html>
