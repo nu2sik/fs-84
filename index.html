@@ -19,9 +19,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
+    <link rel="stylesheet" href="./css/tablet.css" />
+    <link rel="stylesheet" href="./css/desktop.css" />
   </head>
   <body>
-    <header class="header">
+    <!-- <header class="header">
       <div class="container header-container">
         <nav class="header-navigation">
           <a href="/" class="header-logo">
@@ -51,10 +54,10 @@
           Online-booking
         </button>
       </div>
-    </header>
+    </header> -->
     <main>
       <!-- Hero section -->
-      <section class="hero">
+      <!-- <section class="hero">
         <div class="container hero-container">
           <div class="hero-list-wrap">
             <ul class="hero-list list">
@@ -87,11 +90,11 @@
             </p>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- /Hero section -->
 
       <!-- About section -->
-      <section class="about">
+      <!-- <section class="about">
         <div class="container about-container">
           <ul class="about-list list">
             <li class="about-item">
@@ -128,7 +131,7 @@
             <button type="button" class="about-btn btn">ONLINE-BOOKING</button>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- /About section -->
 
       <!-- Section Services -->
@@ -182,7 +185,7 @@
       <!-- /Section Services -->
 
       <!-- Section Feature -->
-      <section class="benefits">
+      <!-- <section class="benefits">
         <div class="container benefits-container">
           <ul class="benefits-list list">
             <li class="benefits-item">
@@ -211,12 +214,12 @@
             </p>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- /Section Feature -->
 
       <!-- Section Team -->
       <section class="barbers">
-        <div class="container">
+        <div class="container container-sm">
           <p class="barbers-subtitle subtitle">
             For true enjoyers of the atmosphere
           </p>
@@ -355,10 +358,39 @@
       <!-- /Section Gallery  -->
 
       <!-- Section Contact -->
-      <section class="contact" id="contact">
+      <!-- <section class="contact" id="contact">
         <div class="container contact-container">
           <div class="contact-form">
-            <h2>Online-booking</h2>
+            <h2 class="contact-title title">Online-booking</h2>
+            <form class="contact-form-inner">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="contact-form-input input-text"
+                  placeholder="Name*"
+                  name="name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="tel"
+                  class="contact-form-input input-text"
+                  placeholder="Phone*"
+                  pattern="^\+[0-9]{3}\s\((\d+)\)-\d{3}-\d{2}-\d{2}"
+                  name="phone"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  name="message"
+                  class="contact-form-textarea input-text"
+                  placeholder="Messase"
+                ></textarea>
+              </div>
+              <button type="submit" class="contact-form-btn btn">Send</button>
+            </form>
           </div>
 
           <div class="contact-wrap">
@@ -417,10 +449,10 @@
             <p class="contact-hours">Every day from 9:00 to 22:00</p>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- /Section Contact -->
     </main>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container footer-container">
         <p>&copy;Copyright 2020</p>
         <ul class="social-list list">
@@ -446,8 +478,8 @@
           </li>
         </ul>
       </div>
-    </footer>
-    <div class="backdrop" data-modal>
+    </footer> -->
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" data-modal-close class="modal-close">X</button>
         <h3 class="modal-title">Modal title</h3>
@@ -504,6 +536,42 @@
               placeholder="Message"
             ></textarea>
           </div>
+          <div class="form-group">
+            <!-- <label for="option-1">Option 1</label>
+            <input
+              type="radio"
+              id="option-1"
+              name="option"
+              value="option-1"
+              checked
+            /> -->
+
+            <input
+              type="checkbox"
+              class="form-checkbox visually-hidden"
+              id="policy"
+              name="policy"
+            />
+            <label for="policy" class="form-label-checkbox">
+              <span>
+                <svg class="form-checkbox-icon" width="10" height="8">
+                  <use href="./img/symbol-defs.svg#icon-check"></use>
+                </svg>
+              </span>
+              Privacy Policy
+            </label>
+
+            <div class="form-group-checkbox">
+              <input
+                type="checkbox"
+                id="slide"
+                name="slide"
+                class="form-checkbox visually-hidden"
+              />
+              <label for="slide" class="form-check-label"></label>
+            </div>
+          </div>
+
           <button type="submit" class="form-btn btn">Send</button>
         </form>
       </div>

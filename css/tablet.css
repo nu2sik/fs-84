@@ -1,0 +1,25 @@
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .barbers,
+  .gallery,
+  .pricess {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .gallery-item {
+    width: calc((100% - 30px) / 2);
+  }
+  .prices-item-text {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 768px), (max-width: 1199px) {
+  .container-sm {
+    max-width: 450px;
+  }
+}
