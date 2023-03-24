@@ -2,4 +2,15 @@
   .container {
     max-width: 448px;
   }
+
+  .hero-container {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
+  .hero-description {
+    max-width: 320px;
+  }
 }

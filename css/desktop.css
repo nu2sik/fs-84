@@ -3,6 +3,47 @@
     max-width: 1190px;
   }
 
+  .header-logo {
+    margin-right: 131px;
+  }
+
+  .header-link {
+    font-size: 20px;
+  }
+
+  .hero-content {
+    padding: 272px 100px 208px;
+  }
+
+  .hero-title {
+    font-size: 72px;
+  }
+
+  .hero-description {
+    font-size: 18px;
+    max-width: 360px;
+  }
+
+  .hero-content {
+    background-image: linear-gradient(
+        rgba(25, 28, 38, 0.2),
+        rgba(25, 28, 38, 0.2)
+      ),
+      url(../img/hero-bg.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-content {
+      background-image: linear-gradient(
+          rgba(25, 28, 38, 0.2),
+          rgba(25, 28, 38, 0.2)
+        ),
+        url(../img/hero-bg-desktop-2x.jpg);
+    }
+  }
+
   .barbers,
   .gallery,
   .prices {

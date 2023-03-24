@@ -24,40 +24,44 @@
     <link rel="stylesheet" href="./css/desktop.css" />
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header-container">
-        <nav class="header-navigation">
-          <a href="/" class="header-logo">
-            <img src="./img/logo.svg" alt="Logo site" />
-          </a>
-          <ul class="header-list list">
-            <li class="header-item">
-              <a href="#" class="header-link link">About</a>
-            </li>
-            <li class="header-item">
-              <a href="#" class="header-link link active"
-                >Services and prices</a
-              >
-            </li>
-            <li class="header-item">
-              <a href="#" class="header-link link">Barbers</a>
-            </li>
-            <li class="header-item">
-              <a href="#contact" class="header-link link">Contacts</a>
-            </li>
-          </ul>
-        </nav>
-        <a href="tel:+380441111111" class="header-tel link"
-          >+38 044 111 11 11</a
-        >
-        <button type="button" data-modal-open class="header-btn btn">
-          Online-booking
-        </button>
+        <a href="/" class="header-logo">
+          <img src="./img/logo.svg" alt="Logo site" />
+        </a>
+        <button type="button" class="header-btn-mobile">+</button>
+        <div class="header-nav-wrap">
+          <button type="button" class="header-btn-mobile-close">X</button>
+          <nav class="header-navigation">
+            <ul class="header-list list">
+              <li class="header-item">
+                <a href="#" class="header-link link">About</a>
+              </li>
+              <li class="header-item">
+                <a href="#" class="header-link link active"
+                  >Services and prices</a
+                >
+              </li>
+              <li class="header-item">
+                <a href="#" class="header-link link">Barbers</a>
+              </li>
+              <li class="header-item">
+                <a href="#contact" class="header-link link">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <a href="tel:+380441111111" class="header-tel link"
+            >+38 044 111 11 11</a
+          >
+          <button type="button" data-modal-open class="header-btn btn">
+            Online-booking
+          </button>
+        </div>
       </div>
-    </header> -->
+    </header>
     <main>
       <!-- Hero section -->
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container hero-container">
           <div class="hero-list-wrap">
             <ul class="hero-list list">
@@ -90,7 +94,7 @@
             </p>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- /Hero section -->
 
       <!-- About section -->
@@ -228,6 +232,10 @@
             <li class="barbers-item">
               <div class="barbers-top-wrap">
                 <img
+                  srcset="
+                    ./img/barber-team-1.jpg    1x,
+                    ./img/barber-team-1-2x.jpg 2x
+                  "
                   src="./img/barber-team-1.jpg"
                   alt="barber work"
                   width="370"
@@ -276,12 +284,36 @@
               </div>
             </li>
             <li class="barbers-item">
-              <img
-                src="./img/barber-team-2.jpg"
-                alt="barber work"
-                width="370"
-                height="346"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/barber-team-2.jpg    1x,
+                    ./img/barber-team-2-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/barber-team-tab-2.jpg    1x,
+                    ./img/barber-team-2-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/barber-team-mob-2.jpg    1x,
+                    ./img/barber-team-2-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./img/barber-team-2.jpg"
+                  alt="barber work"
+                  width="370"
+                  height="346"
+                />
+              </picture>
+
               <div class="barbers-content">
                 <h3 class="barbers-item-title">Michele Doe</h3>
                 <p class="barbers-item-text">Extreme Barber</p>
